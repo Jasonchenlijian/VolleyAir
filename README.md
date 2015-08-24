@@ -1,5 +1,5 @@
 # VolleyAir
-***
+
 ##简介
 VolleyAir是在著名的谷歌开源的网络框架Volley的基础上进行的二次封装，并吸取了VolleyPlus的一些封装经验，使之能更有效的在复杂的数据处理逻辑层进行网络请求，使逻辑层的代码更加清爽简洁。
 之所以选择Volley进行封装，是因为Volley是一款极为高效的网络请求框架，并且开发自谷歌的Android团队。在其基础上封装适配过后，将更为有利于我们的应用开发。
@@ -127,5 +127,5 @@ VolleyAir是在著名的谷歌开源的网络框架Volley的基础上进行的�
 
 ##关于作者
 * GitHub项目地址：[https://github.com/Jasonchenlijian/VolleyAir](https://github.com/Jasonchenlijian/VolleyAir)
-* Email： 1033526540@qq.com, jasonchenlijian@outlook.com
+* Email： 1033526540@qq.com , jasonchenlijian@outlook.com
 * 欢迎关注我的博客给我的写的文字提提意见： [http://www.jianshu.com/users/03be02d3e424/latest_articles](http://www.jianshu.com/users/03be02d3e424/latest_articles)
