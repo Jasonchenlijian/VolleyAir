@@ -52,7 +52,6 @@ VolleyAir是在著名的谷歌开源的网络框架Volley的基础上进行的�
         }
     }
 
-
 3.让View层（Activity、Fragment等）实现网络数据接收器接口
 
 	public class MainActivity extends AppCompatActivity implements Receiver<DataModule>
