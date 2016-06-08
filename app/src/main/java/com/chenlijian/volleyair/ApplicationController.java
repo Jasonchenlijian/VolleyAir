@@ -1,7 +1,7 @@
 package com.chenlijian.volleyair;
 
-public class ApplicationController extends com.android.volley.base.ApplicationController {
 
+public class ApplicationController extends com.volley.air.base.ApplicationController {
 
 	private NetworkModule networkModule;
 

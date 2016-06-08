@@ -19,13 +19,12 @@ ADDED from E:\Github\VolleyAir\app\src\main\AndroidManifest.xml:5:5-67
 		ADDED from E:\Github\VolleyAir\app\src\main\AndroidManifest.xml:5:22-64
 application
 ADDED from E:\Github\VolleyAir\app\src\main\AndroidManifest.xml:7:5-22:19
-MERGED from [VolleyAir:library:unspecified] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\VolleyAir\library\unspecified\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-v4:24.0.0-alpha2] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.3.0] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:24.0.0-alpha2] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.3.0] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:24.0.0-alpha2] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:24.0.0-alpha2] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:22:5-20
 	android:label
@@ -56,14 +55,14 @@ ADDED from E:\Github\VolleyAir\app\src\main\AndroidManifest.xml:19:17-77
 		ADDED from E:\Github\VolleyAir\app\src\main\AndroidManifest.xml:19:27-74
 uses-sdk
 INJECTED from E:\Github\VolleyAir\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [VolleyAir:library:unspecified] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\VolleyAir\library\unspecified\AndroidManifest.xml:7:5-43
-MERGED from [com.android.support:support-v4:24.0.0-alpha2] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:23.3.0] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-v4:24.0.0-alpha2] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:animated-vector-drawable:23.3.0] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-v4:24.0.0-alpha2] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha2] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
+MERGED from [VolleyAir:Volley:unspecified] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\VolleyAir\Volley\unspecified\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-v4:24.0.0-alpha2] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\AndroidManifest.xml:20:5-43
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:23.3.0] E:\Github\VolleyAir\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:23:9-75

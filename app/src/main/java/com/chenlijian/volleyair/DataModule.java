@@ -1,7 +1,7 @@
 package com.chenlijian.volleyair;
 
-import com.android.volley.HttpProcessException;
-import com.android.volley.IDData;
+import com.volley.air.HttpProcessException;
+import com.volley.air.IDData;
 import com.chenlijian.volleyair.bean.LoginState;
 import com.chenlijian.volleyair.bean.NewsListItem;
 
