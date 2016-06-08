@@ -12,7 +12,6 @@ public class LoginState {
 	private String overTime;
 	private UserInfo user;
 	
-	
 	public int get_id() {
 		return _id;
 	}
