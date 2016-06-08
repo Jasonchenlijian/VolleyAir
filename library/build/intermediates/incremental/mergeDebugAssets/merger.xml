@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="E:\Github\VolleyAir\library\assets"/><source path="E:\Github\VolleyAir\library\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="E:\Github\VolleyAir\library\build-types\debug\assets"/></dataSet></merger>

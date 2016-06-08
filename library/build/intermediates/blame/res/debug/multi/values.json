@@ -1,0 +1,254 @@
+[
+    {
+        "outputFile": "E:\\Github\\VolleyAir\\library\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 56,
+                    "endOffset": 107
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 140,
+                        "endColumn": 56,
+                        "endOffset": 192
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 112,
+                    "endColumn": 57,
+                    "endOffset": 165
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 198,
+                        "endColumn": 57,
+                        "endOffset": 251
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 170,
+                    "endColumn": 47,
+                    "endOffset": 213
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 91,
+                        "endColumn": 47,
+                        "endOffset": 134
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 218,
+                    "endColumn": 54,
+                    "endOffset": 268
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 110,
+                        "endColumn": 54,
+                        "endOffset": 160
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 273,
+                    "endColumn": 49,
+                    "endOffset": 318
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 49,
+                        "endOffset": 104
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 323,
+                    "endColumn": 51,
+                    "endOffset": 370
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 166,
+                        "endColumn": 51,
+                        "endOffset": 213
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 375,
+                    "endColumn": 83,
+                    "endOffset": 454
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1235,
+                        "endColumn": 83,
+                        "endOffset": 1314
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 459,
+                    "endColumn": 74,
+                    "endOffset": 529
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1004,
+                        "endColumn": 74,
+                        "endOffset": 1074
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 534,
+                    "endColumn": 80,
+                    "endOffset": 610
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 834,
+                        "endColumn": 80,
+                        "endOffset": 910
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 615,
+                    "endColumn": 86,
+                    "endOffset": 697
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 916,
+                        "endColumn": 86,
+                        "endOffset": 998
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 702,
+                    "endColumn": 72,
+                    "endOffset": 770
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1080,
+                        "endColumn": 72,
+                        "endOffset": 1148
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 775,
+                    "endColumn": 98,
+                    "endOffset": 869
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 734,
+                        "endColumn": 98,
+                        "endOffset": 828
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 874,
+                    "endColumn": 79,
+                    "endOffset": 949
+                },
+                "from": {
+                    "file": "E:\\Github\\VolleyAir\\library\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1154,
+                        "endColumn": 79,
+                        "endOffset": 1229
+                    }
+                }
+            }
+        ]
+    }
+]

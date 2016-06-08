@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/D:/AndroidStudioProjects/VolleyAir/library/build/intermediates/bundles/debug/res/values/values.xml -->
-    <eat-comment/>
     <color name="photo_crop_dim_color">#cc000000</color>
     <color name="photo_crop_highlight_color">#fff</color>
     <color name="solid_black">#ff000000</color>
