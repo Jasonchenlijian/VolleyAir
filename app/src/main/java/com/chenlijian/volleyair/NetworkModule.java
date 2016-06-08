@@ -39,6 +39,32 @@ public class NetworkModule {
     public static final String ACTION_USER_LOGIN_CHANGED = "action.com.chenlijian.volleyair.loginStateChanged";
 
 
+    private Context context;
+    private LoginState loginState;
+    private ReentrantLock loginLock;
+    private TaskCenter center;
+
+    private VolleyPostString volleyPostString;
+    private OauthVolleyPostString oauthVolleyPostString;
+    private VolleyPostMultipart volleyPostMultipart;
+
+    public NetworkModule(ApplicationController app) {
+        context = app.getApplicationContext();
+        loginState = null;
+        loginLock = new ReentrantLock();
+        center = new TaskCenter();
+
+        volleyPostString = new VolleyPostString();
+        oauthVolleyPostString = new OauthVolleyPostString();
+        volleyPostMultipart = new VolleyPostMultipart();
+    }
+
+
+
+
+
+
+
     /****************************************************Volley请求***********************************************/
 
     /**
@@ -80,7 +106,6 @@ public class NetworkModule {
     private class OauthVolleyPostString implements Processor<DataModule> {
         @Override
         public DataModule process(HttpRequest request) throws HttpProcessException {
-            // TODO Auto-generated method stub
 
             request.addParameter("token", getAccessToken(null));
 
@@ -175,34 +200,6 @@ public class NetworkModule {
     /***************************************
      *inner
      **********************************************/
-
-    private Context context;
-    private LoginState loginState;
-    private ReentrantLock loginLock;
-    private TaskCenter center;
-
-    private VolleyPostString volleyPostString;
-    private OauthVolleyPostString oauthVolleyPostString;
-    private VolleyPostMultipart volleyPostMultipart;
-
-    public NetworkModule(ApplicationController app) {
-        context = app.getApplicationContext();
-        loginState = null;
-        loginLock = new ReentrantLock();
-        center = new TaskCenter();
-
-        volleyPostString = new VolleyPostString();
-        oauthVolleyPostString = new OauthVolleyPostString();
-        volleyPostMultipart = new VolleyPostMultipart();
-    }
-
-
-
-
-
-
-
-
 
 
 
