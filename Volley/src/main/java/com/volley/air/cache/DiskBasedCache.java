@@ -297,8 +297,8 @@ public class DiskBasedCache implements Cache {
      */
     @SuppressWarnings("serial")
 	private class CacheContainer extends ConcurrentHashMap<String, CacheHeader> {
-        private final PriorityBlockingQueue<Runnable> mQueue = new PriorityBlockingQueue<Runnable>();
-        private final Map<String, Future<CacheHeader>> mLoadingFiles = new ConcurrentHashMap<String, Future<CacheHeader>>();
+        private final PriorityBlockingQueue<Runnable> mQueue = new PriorityBlockingQueue<>();
+        private final Map<String, Future<CacheHeader>> mLoadingFiles = new ConcurrentHashMap<>();
 
         /** Total amount of space currently used by the cache in bytes. */
         private AtomicLong mTotalSize = new AtomicLong(0);

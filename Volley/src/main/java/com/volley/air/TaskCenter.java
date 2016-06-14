@@ -70,7 +70,7 @@ public class TaskCenter implements Executor {
     }
 
     public TaskCenter(CenterSpec spec){
-        runQueue = new LinkedBlockingQueue<Runnable>();
+        runQueue = new LinkedBlockingQueue<>();
         if(spec == null){
             spec = createSpec();
         }

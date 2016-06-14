@@ -59,7 +59,7 @@ public class RequestFuture<T> implements Future<T>, Response.Listener<T>,
     private VolleyError mException;
 
     public static <E> RequestFuture<E> newFuture() {
-        return new RequestFuture<E>();
+        return new RequestFuture<>();
     }
 
     private RequestFuture() {}

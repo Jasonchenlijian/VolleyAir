@@ -500,7 +500,7 @@ public class ImageLoader {
         private VolleyError mError;
 
         /** List of all of the active ImageContainers that are interested in the request */
-        private final LinkedList<ImageContainer> mContainers = new LinkedList<ImageContainer>();
+        private final LinkedList<ImageContainer> mContainers = new LinkedList<>();
 
         /**
          * Constructs a new BatchedImageRequest object
