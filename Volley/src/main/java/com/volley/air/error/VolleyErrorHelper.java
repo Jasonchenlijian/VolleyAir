@@ -12,6 +12,13 @@ import java.util.Map;
 import com.volley.air.base.NetworkResponse;
 
 public class VolleyErrorHelper {
+	
+	/**
+	 * Prevents class instantiation
+	 */
+	private VolleyErrorHelper() {
+	}
+
 	/**
 	 * 
 	 * @param error

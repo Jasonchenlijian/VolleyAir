@@ -7,6 +7,12 @@ import java.net.URLEncoder;
 
 public class UrlEncodingHelper {
 
+    /**
+     * Prevents class instantiation
+     */
+    private UrlEncodingHelper() {
+    }
+
     public static String encode(final String content, final String encoding) {
         try {
             return URLEncoder.encode(

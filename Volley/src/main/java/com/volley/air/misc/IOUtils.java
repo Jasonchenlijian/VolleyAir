@@ -10,6 +10,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class IOUtils {
+    /**
+     * Prevents class instantiation
+     */
+    private IOUtils() {
+    }
     /*
      * Homebrewed simple serialization system used for reading and writing cache
      * headers on disk. Once upon a time, this used the standard Java

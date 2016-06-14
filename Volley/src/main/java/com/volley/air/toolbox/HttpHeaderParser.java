@@ -34,6 +34,12 @@ import com.volley.air.base.NetworkResponse;
 public class HttpHeaderParser {
 
     /**
+     * Prevents class instantiation
+     */
+    private HttpHeaderParser() {
+    }
+
+    /**
      * Extracts a {@link Cache.Entry} from a {@link NetworkResponse}.
      *
      * @param response The network response to parse headers from
