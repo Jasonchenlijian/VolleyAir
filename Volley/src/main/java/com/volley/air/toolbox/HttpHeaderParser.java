@@ -152,7 +152,7 @@ public class HttpHeaderParser {
        long now = System.currentTimeMillis();
        Map<String, String> headers = response.headers;
        long serverDate = 0;
-       String serverEtag = null;
+       String serverEtag;
        String headerValue;
 
        headerValue = headers.get("Date");
@@ -191,7 +191,7 @@ public class HttpHeaderParser {
         long now = System.currentTimeMillis();
         Map<String, String> headers = response.headers;
         long serverDate = 0;
-        String serverEtag = null;
+        String serverEtag;
         String headerValue;
 
         headerValue = headers.get("Date");
