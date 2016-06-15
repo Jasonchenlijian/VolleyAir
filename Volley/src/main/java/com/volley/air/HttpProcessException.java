@@ -10,13 +10,13 @@ public class HttpProcessException extends Exception{
 
     private final int ErrorType;
 
-    public static final int RequestCancelled = -1;
-    public static final int FailOpenConnection = 1;
-    public static final int ConnectionTimeOut = 2;
-    public static final int WriteRequestError = 3;
-    public static final int ReadResponseError = 4;
-    public static final int OtherReason = 5;
-    private static int CustomCode = OtherReason;
+    public static final int REQUEST_CANCELLED = -1;
+    public static final int FAIL_OPEN_CONNECTION = 1;
+    public static final int CONNECTION_TIME_OUT = 2;
+    public static final int WRITE_REQUEST_ERROR = 3;
+    public static final int READ_RESPONSE_ERROR = 4;
+    public static final int OTHER_REASON = 5;
+    private static int CustomCode = OTHER_REASON;
 
     public static int createCustomErrorCode(){
         synchronized(HttpProcessException.class){
@@ -25,7 +25,7 @@ public class HttpProcessException extends Exception{
     }
 
     public static HttpProcessException cancelExce(){
-        return new HttpProcessException("request is cancelled.", RequestCancelled);
+        return new HttpProcessException("request is cancelled.", REQUEST_CANCELLED);
     }
     /******************** class inner part *********************/
 
