@@ -202,7 +202,7 @@ public class SimpleImageLoader extends ImageLoader {
      * @return
      */
     public  SimpleImageLoader setDefaultDrawable(int defaultPlaceHolderResId){
-        mPlaceHolderDrawables = new ArrayList<Drawable>(1);
+        mPlaceHolderDrawables = new ArrayList<>(1);
         mPlaceHolderDrawables.add(defaultPlaceHolderResId == -1 ?
                 null : getResources().getDrawable(defaultPlaceHolderResId));
         return this;

@@ -39,8 +39,8 @@ public abstract class MultiPartRequest<T> extends Request<T> implements Progress
 		super(method, url, Priority.NORMAL, errorListener, new DefaultRetryPolicy(TIMEOUT_MS, DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
 				DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 		mListener = listener;
-		mMultipartParams = new HashMap<String, MultiPartParam>();
-		mFileUploads = new HashMap<String, String>();
+		mMultipartParams = new HashMap<>();
+		mFileUploads = new HashMap<>();
 
 	}
 

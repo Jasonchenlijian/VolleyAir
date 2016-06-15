@@ -120,7 +120,7 @@ public class DataModule {
             IDData data = new IDData(json.optInt("count", -1), null);
             JSONArray array = json.optJSONArray("data");
 
-            ArrayList<NewsListItem> list = new ArrayList<NewsListItem>(array == null ? 0 : array.length());
+            ArrayList<NewsListItem> list = new ArrayList<>(array == null ? 0 : array.length());
             data.data = list;
             if (null != array) {
                 NewsListItem item;

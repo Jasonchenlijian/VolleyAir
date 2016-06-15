@@ -24,7 +24,7 @@ public class HttpRequest {
     //添加HashMap参数
     public void addParameter(String name, String value) {
         if (null == hashMap)
-            hashMap = new HashMap<String, String>();
+            hashMap = new HashMap<>();
         hashMap.put(name, value);
     }
 
@@ -39,7 +39,7 @@ public class HttpRequest {
     //添加文件参数
     public void addFile(String name, String value) {
         if (null == hashMap_file)
-            hashMap_file = new HashMap<String, String>();
+            hashMap_file = new HashMap<>();
         hashMap_file.put(name, value);
     }
 

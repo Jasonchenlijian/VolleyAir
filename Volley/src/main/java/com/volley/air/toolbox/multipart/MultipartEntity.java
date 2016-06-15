@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class MultipartEntity extends AbstractHttpEntity implements Cloneable {
     
-    private List<Part> parts = new ArrayList<Part>();
+    private List<Part> parts = new ArrayList<>();
     
     private Boundary boundary;
     

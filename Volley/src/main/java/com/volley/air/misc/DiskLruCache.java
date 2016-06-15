@@ -143,7 +143,7 @@ public final class DiskLruCache implements Closeable {
 	private final int valueCount;
 	private long size = 0;
 	private Writer journalWriter;
-	private final LinkedHashMap<String, Entry> lruEntries = new LinkedHashMap<String, Entry>(0, 0.75f, true);
+	private final LinkedHashMap<String, Entry> lruEntries = new LinkedHashMap<>(0, 0.75f, true);
 	private int redundantOpCount;
 
 	/**
@@ -612,7 +612,7 @@ public final class DiskLruCache implements Closeable {
 		if (journalWriter == null) {
 			return; // Already closed.
 		}
-		for (Entry entry : new ArrayList<Entry>(lruEntries.values())) {
+		for (Entry entry : new ArrayList<>(lruEntries.values())) {
 			if (entry.currentEditor != null) {
 				entry.currentEditor.abort();
 			}

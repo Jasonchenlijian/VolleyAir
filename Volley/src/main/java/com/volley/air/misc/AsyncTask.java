@@ -211,7 +211,7 @@ public abstract class AsyncTask<Params, Progress, Result> {
     };
 
     private static final BlockingQueue<Runnable> sPoolWorkQueue =
-            new LinkedBlockingQueue<Runnable>(10);
+            new LinkedBlockingQueue<>(10);
 
     /**
      * An {@link Executor} that can be used to execute tasks in parallel.
@@ -247,7 +247,7 @@ public abstract class AsyncTask<Params, Progress, Result> {
 
     @TargetApi(11)
     private static class SerialExecutor implements Executor {
-        final ArrayDeque<Runnable> mTasks = new ArrayDeque<Runnable>();
+        final ArrayDeque<Runnable> mTasks = new ArrayDeque<>();
         Runnable mActive;
 
         public synchronized void execute(final Runnable r) {
@@ -342,7 +342,7 @@ public abstract class AsyncTask<Params, Progress, Result> {
     private Result postResult(Result result) {
         @SuppressWarnings("unchecked")
         Message message = sHandler.obtainMessage(MESSAGE_POST_RESULT,
-                new AsyncTaskResult<Result>(this, result));
+                new AsyncTaskResult<>(this, result));
         message.sendToTarget();
         return result;
     }
@@ -646,7 +646,7 @@ public abstract class AsyncTask<Params, Progress, Result> {
     protected final void publishProgress(Progress... values) {
         if (!isCancelled()) {
             sHandler.obtainMessage(MESSAGE_POST_PROGRESS,
-                    new AsyncTaskResult<Progress>(this, values)).sendToTarget();
+                    new AsyncTaskResult<>(this, values)).sendToTarget();
         }
     }
 
