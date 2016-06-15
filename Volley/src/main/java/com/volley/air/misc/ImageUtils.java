@@ -30,7 +30,13 @@ public class ImageUtils {
 
     private static final String BASE64_URI_PREFIX = "base64,";
     private static final Pattern BASE64_IMAGE_URI_PATTERN = Pattern.compile("^(?:.*;)?base64,.*");
-    
+
+    /**
+     * Prevents class instantiation
+     */
+    private ImageUtils() {
+    }
+
     /**
      * Returns the largest power-of-two divisor for use in downscaling a bitmap
      * that will not result in the scaling past the desired dimensions.

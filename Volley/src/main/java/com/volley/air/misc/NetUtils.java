@@ -24,6 +24,12 @@ import android.util.Log;
 public class NetUtils {
     private static final String TAG = "NetUtils";
     private static String mUserAgent = null;
+    
+    /**
+     * Prevents class instantiation
+     */
+    private NetUtils() {
+    }
 
     public static String getUserAgent(Context mContext) {
         if (mUserAgent == null) {

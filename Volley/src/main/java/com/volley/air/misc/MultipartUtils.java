@@ -38,6 +38,12 @@ public class MultipartUtils {
 
     public static final byte[] CRLF_BYTES = EncodingUtils.getAsciiBytes(CRLF);
 
+    /**
+     * Prevents class instantiation
+     */
+    private MultipartUtils() {
+    }
+
     public static int getContentLengthForMultipartRequest(String boundary, Map<String, MultiPartRequest.MultiPartParam> multipartParams, Map<String, String> filesToUpload) {
         final int boundaryLength = boundary.getBytes().length;
         int contentLength = 0;
