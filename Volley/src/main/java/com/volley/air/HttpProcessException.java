@@ -2,6 +2,7 @@ package com.volley.air;
 
 /**
  * Created by Jason Chen on 2015/8/13.
+ * 异常类
  */
 public class HttpProcessException extends Exception{
     /******************** public static part *********************/

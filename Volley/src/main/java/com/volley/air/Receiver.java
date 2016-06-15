@@ -6,7 +6,7 @@ package com.volley.air;
  */
 public interface Receiver<T> {
 
-    void onSucess(TaskHandle handle, T result);
+    void onSuccess(TaskHandle handle, T result);
 
     void onError(TaskHandle handle, Throwable error);
 
