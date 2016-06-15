@@ -677,7 +677,7 @@ public abstract class AsyncTask<Params, Progress, Result> {
         }
     }
 
-    private static abstract class WorkerRunnable<Params, Result> implements Callable<Result> {
+    private abstract static class WorkerRunnable<Params, Result> implements Callable<Result> {
         Params[] mParams;
     }
 

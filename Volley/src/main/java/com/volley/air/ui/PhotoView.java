@@ -55,19 +55,19 @@ public class PhotoView extends NetworkImageView implements OnGestureListener,
         OnDoubleTapListener, ScaleGestureDetector.OnScaleGestureListener,
         HorizontallyScrollable {
     /** Zoom animation duration; in milliseconds */
-    private final static long ZOOM_ANIMATION_DURATION = 300L;
+    private static final long ZOOM_ANIMATION_DURATION = 300L;
     /** Rotate animation duration; in milliseconds */
-    private final static long ROTATE_ANIMATION_DURATION = 500L;
+    private static final long ROTATE_ANIMATION_DURATION = 500L;
     /** Snap animation duration; in milliseconds */
     private static final long SNAP_DURATION = 100L;
     /** Amount of time to wait before starting snap animation; in milliseconds */
     private static final long SNAP_DELAY = 250L;
     /** By how much to scale the image when double click occurs */
-    private final static float DOUBLE_TAP_SCALE_FACTOR = 1.5f;
+    private static final float DOUBLE_TAP_SCALE_FACTOR = 1.5f;
     /** Amount of translation needed before starting a snap animation */
-    private final static float SNAP_THRESHOLD = 20.0f;
+    private static final float SNAP_THRESHOLD = 20.0f;
     /** The width & height of the bitmap returned by {@link #getCroppedPhoto()} */
-    private final static float CROPPED_SIZE = 256.0f;
+    private static final float CROPPED_SIZE = 256.0f;
 
     /**
      * Touch slop used to determine if this double tap is valid for starting a scale or should be

@@ -71,7 +71,7 @@ public abstract class MultiPartRequest<T> extends Request<T> implements Progress
 	}
 
 	@Override
-	abstract protected Response<T> parseNetworkResponse(NetworkResponse response);
+	protected abstract Response<T> parseNetworkResponse(NetworkResponse response);
 
 	@Override
 	protected void deliverResponse(T response) {

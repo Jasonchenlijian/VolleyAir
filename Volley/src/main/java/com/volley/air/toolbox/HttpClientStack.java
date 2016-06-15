@@ -58,7 +58,7 @@ public class HttpClientStack implements HttpStack {
 	protected final HttpClient mClient;
 
 	private static final String CONTENT_TYPE_MULTIPART = "multipart/form-data; charset=%s; boundary=%s";
-	private final static String HEADER_CONTENT_TYPE = "Content-Type";
+	private static final String HEADER_CONTENT_TYPE = "Content-Type";
 
 	public HttpClientStack(HttpClient client) {
 		mClient = client;
@@ -212,7 +212,7 @@ public class HttpClientStack implements HttpStack {
 	 */
 	public static final class HttpPatch extends HttpEntityEnclosingRequestBase {
 
-		public final static String METHOD_NAME = "PATCH";
+		public static final String METHOD_NAME = "PATCH";
 
 		public HttpPatch() {
 			super();
