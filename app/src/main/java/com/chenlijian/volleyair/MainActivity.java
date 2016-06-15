@@ -6,26 +6,28 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.volley.air.HttpRequest;
 import com.volley.air.Receiver;
 import com.volley.air.TaskHandle;
+import com.volley.air.VolleyAir;
 
-public class MainActivity extends AppCompatActivity implements Receiver<DataModule>{
+public class MainActivity extends AppCompatActivity implements Receiver<String>{
 
-    private NetworkModule networkModule;
 
-    private Button button;
     private TextView txt_1, txt_2;
+
+    private VolleyAir volleyAir = new VolleyAir(MyApplication.getInstance());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        networkModule = ((ApplicationController)getApplication()).getNetworkModule();
-        button = (Button) findViewById(R.id.begin_volley);
+        Button button = (Button) findViewById(R.id.begin_volley);
         txt_1 = (TextView) findViewById(R.id.result_one);
         txt_2 = (TextView) findViewById(R.id.result_two);
 
+        assert button != null;
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,15 +44,16 @@ public class MainActivity extends AppCompatActivity implements Receiver<DataModu
      */
     private void beginVolley(){
 
-        TaskHandle handle_0 = networkModule.arrangeGetNewsList("arrangeGetNewsList", null, null, 1, 10, null);
-        handle_0.setId(0);
-        handle_0.setReceiver(this);
-        handle_0.pullTrigger();
+        HttpRequest request = new HttpRequest("http://op.juhe.cn/onebox/news/query?key=&q=%E6%99%AE%E4%BA%AC%E5%A4%B1%E8%B8%AA");  // api地址
+        request.addParameter("dtype", "json");      // 参数1
+        request.addParameter("key", "test");        // 参数2
+        request.setRequestTag("news");              // 分配请求tag，必要时可用于取消该请求
 
-        TaskHandle handle_1 = networkModule.arrangeUploadImg("arrangeUploadImg", "path");
-        handle_1.setId(1);
-        handle_1.setReceiver(this);
-        handle_1.pullTrigger();
+        TaskHandle handle_0 = volleyAir.arrange(request);
+        handle_0.setId(0);              // 分配Id，便于回调时候区分结果
+        handle_0.setReceiver(this);     // 设置回调监听者
+        handle_0.pullTrigger();         // 执行请求
+
     }
 
 
@@ -60,20 +63,14 @@ public class MainActivity extends AppCompatActivity implements Receiver<DataModu
      * @param result
      */
     @Override
-    public void onSucess(TaskHandle handle, DataModule result) {
+    public void onSuccess(TaskHandle handle, String result) {
         switch (handle.id()){
             case 0:
-                if(result.code() == DataModule.CodeSucess){
-
-                }
-                txt_1.setText(result.toString());
+                txt_1.setText(result);
                 break;
 
             case 1:
-                if(result.code() == DataModule.CodeSucess){
-
-                }
-                txt_2.setText(result.toString());
+                txt_2.setText(result);
                 break;
         }
     }

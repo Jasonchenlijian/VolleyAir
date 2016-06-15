@@ -32,9 +32,6 @@ public class NetUtils {
                 String packageName = mContext.getPackageName();
                 PackageInfo info = mContext.getPackageManager().getPackageInfo(packageName, 0);
                 mUserAgent = packageName + "/" + info.versionCode;
-                
-/*                String version = mContext.getPackageManager().getPackageInfo(packageName, 0).versionName;
-                mUserAgent = mUserAgent + " (" + packageName + "/" + version + ")";*/
                 Log.d(TAG, "User agent set to: " + mUserAgent);
             } catch (PackageManager.NameNotFoundException e) {
             	Log.d(TAG, "Unable to find self by package name", e);

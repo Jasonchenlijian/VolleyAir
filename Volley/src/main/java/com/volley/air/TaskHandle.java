@@ -11,7 +11,6 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class TaskHandle {
 
-
     public static final byte Result_NotDoing = 0;
     public static final byte Result_NotBorn = 1;
     public static final byte Result_ComeOut = 2;
@@ -37,13 +36,12 @@ public class TaskHandle {
 
         @Override
         public void run() {
-            // TODO Auto-generated method stub
             Receiver rec = receiver;
             Object result = outcome;
 
             if (type == RanNormal) {
                 if (state.compareAndSet(RanNormal, Handling)) {
-                    rec.onSucess(TaskHandle.this, result);
+                    rec.onSuccess(TaskHandle.this, result);
                     if (state.compareAndSet(Handling, Done)) {
                         onFinal();
                     }
@@ -126,12 +124,12 @@ public class TaskHandle {
             throw new IllegalArgumentException(Helper.shouldntNull("receiver"));
 
         for (int s; ; ) {
-            s = state.get();                    // 获取AtomicInteger当前的值(表示任务进展到了哪一步)
-            if (s >= Done) {                        // Done，异常，或者cancel
+            s = state.get();                     // 获取AtomicInteger当前的值(表示任务进展到了哪一步)
+            if (s >= Done) {                     // Done，异常，或者cancel
                 if (rs != Result_ComeOut)        // not run over.
                     return false;
                 Receiver rec = receiver;
-                rec.onSucess(this, outcome);
+                rec.onSuccess(this, outcome);
                 return true;
             }
             if (state.compareAndSet(s, s)) {
@@ -145,7 +143,6 @@ public class TaskHandle {
      * 取消线程
      */
     public boolean cancel() {
-        // TODO Auto-generated method stub
         for (int s; ; ) {
             s = state.get();
             if (s >= Done)             // 如果任务已经进行到了5,6,7，则不能被cancel
@@ -167,7 +164,6 @@ public class TaskHandle {
             et.execute(new Runnable() {
                 @Override
                 public void run() {
-                    // TODO Auto-generated method stub
                     Processor pro = processor;
                     if (state.compareAndSet(Waitting, Running)) {
                         if (null != pro) {
