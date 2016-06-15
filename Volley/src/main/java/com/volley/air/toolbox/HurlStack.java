@@ -252,7 +252,7 @@ public class HurlStack implements HttpStack {
                     int transferredBytes = 0;
                     int totalSize = (int) file.length();
 					input = new BufferedInputStream(fis);
-					int bufferLength = 0;
+					int bufferLength;
 
 					byte[] buffer = new byte[1024];
 					while ((bufferLength = input.read(buffer)) > 0) {
