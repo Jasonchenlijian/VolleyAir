@@ -11,19 +11,19 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class TaskHandle {
 
-    public static final byte Result_NotDoing = 0;
-    public static final byte Result_NotBorn = 1;
-    public static final byte Result_ComeOut = 2;
-    public static final byte Result_Exception = -1;
+    public static final byte RESULT_NOT_DOING = 0;
+    public static final byte RESULT_NOT_BORN = 1;
+    public static final byte RESULT_COME_OUT = 2;
+    public static final byte RESULT_EXCEPTION = -1;
 
-    protected static final byte Idle = 0;
-    protected static final byte Waitting = 1;
-    protected static final byte Running = 2;
-    protected static final byte RanNormal = 3;
-    protected static final byte Handling = 4;
-    protected static final byte Done = 5;
-    protected static final byte RanExceptional = 6;
-    protected static final byte Cancelled = 7;
+    protected static final byte IDLE = 0;
+    protected static final byte WAITTING = 1;
+    protected static final byte RUNNING = 2;
+    protected static final byte RAN_NORMAL = 3;
+    protected static final byte HANDLING = 4;
+    protected static final byte DONE = 5;
+    protected static final byte RAN_EXCEPTIONAL = 6;
+    protected static final byte CANCELLED = 7;
 
 
     private class FinalRunner implements Runnable {
@@ -39,15 +39,15 @@ public class TaskHandle {
             Receiver rec = receiver;
             Object result = outcome;
 
-            if (type == RanNormal) {
-                if (state.compareAndSet(RanNormal, Handling)) {
+            if (type == RAN_NORMAL) {
+                if (state.compareAndSet(RAN_NORMAL, HANDLING)) {
                     rec.onSuccess(TaskHandle.this, result);
-                    if (state.compareAndSet(Handling, Done)) {
+                    if (state.compareAndSet(HANDLING, DONE)) {
                         onFinal();
                     }
                 }
-            } else if (type == RanExceptional) {
-                if (state.compareAndSet(RanExceptional, RanExceptional)) {
+            } else if (type == RAN_EXCEPTIONAL) {
+                if (state.compareAndSet(RAN_EXCEPTIONAL, RAN_EXCEPTIONAL)) {
                     rec.onError(TaskHandle.this, (Throwable) result);
                 }
             }
@@ -79,8 +79,8 @@ public class TaskHandle {
         this.processor = processor;
         this.handler = handler;
 
-        state = new AtomicInteger(Idle);
-        rs = Result_NotBorn;
+        state = new AtomicInteger(IDLE);
+        rs = RESULT_NOT_BORN;
         outcome = null;
     }
 
@@ -97,7 +97,7 @@ public class TaskHandle {
     private boolean isCancelled() {
         for (int s; ; ) {
             s = state.get();
-            if (s >= Done)
+            if (s >= DONE)
                 return true;
             if (state.compareAndSet(s, s)) {
                 return false;
@@ -125,8 +125,8 @@ public class TaskHandle {
 
         for (int s; ; ) {
             s = state.get();                     // 获取AtomicInteger当前的值(表示任务进展到了哪一步)
-            if (s >= Done) {                     // Done，异常，或者cancel
-                if (rs != Result_ComeOut)        // not run over.
+            if (s >= DONE) {                     // DONE，异常，或者cancel
+                if (rs != RESULT_COME_OUT)        // not run over.
                     return false;
                 Receiver rec = receiver;
                 rec.onSuccess(this, outcome);
@@ -145,9 +145,9 @@ public class TaskHandle {
     public boolean cancel() {
         for (int s; ; ) {
             s = state.get();
-            if (s >= Done)             // 如果任务已经进行到了5,6,7，则不能被cancel
+            if (s >= DONE)             // 如果任务已经进行到了5,6,7，则不能被cancel
                 return false;
-            if (state.compareAndSet(s, Cancelled)) {
+            if (state.compareAndSet(s, CANCELLED)) {
                 onFinal();            //清空TaskHandle所有成员变量，取消任务
                 return true;
             }
@@ -160,18 +160,18 @@ public class TaskHandle {
      */
     public boolean pullTrigger() {
         Executor et = executor;
-        if (state.compareAndSet(Idle, Waitting)) {
+        if (state.compareAndSet(IDLE, WAITTING)) {
             et.execute(new Runnable() {
                 @Override
                 public void run() {
                     Processor pro = processor;
-                    if (state.compareAndSet(Waitting, Running)) {
+                    if (state.compareAndSet(WAITTING, RUNNING)) {
                         if (null != pro) {
                             try {
-                                setFinal(RanNormal, pro.process(request));
+                                setFinal(RAN_NORMAL, pro.process(request));
                             } catch (Throwable ex) {
                                 ex.printStackTrace();
-                                setFinal(RanExceptional, ex);
+                                setFinal(RAN_EXCEPTIONAL, ex);
                             }
                         }
                     }
@@ -189,9 +189,9 @@ public class TaskHandle {
      */
     private void setFinal(byte newState, Object data) {
         outcome = data;
-        rs = newState == RanNormal ? Result_ComeOut : Result_Exception;
+        rs = newState == RAN_NORMAL ? RESULT_COME_OUT : RESULT_EXCEPTION;
 
-        if (state.compareAndSet(Running, newState)) {
+        if (state.compareAndSet(RUNNING, newState)) {
             if (receiver != null) {
                 handler.post(new FinalRunner(newState));
                 executor = null;
