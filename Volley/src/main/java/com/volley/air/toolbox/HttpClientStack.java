@@ -65,16 +65,16 @@ public class HttpClientStack implements HttpStack {
 	}
 
 	private static void addHeaders(HttpUriRequest httpRequest, Map<String, String> headers) {
-		for (String key : headers.keySet()) {
-			httpRequest.setHeader(key, headers.get(key));
+		for (Map.Entry<String, String> entry : headers.entrySet()) {
+			httpRequest.setHeader(entry.getKey(), entry.getValue());
 		}
 	}
 
 	@SuppressWarnings("unused")
 	private static List<NameValuePair> getPostParameterPairs(Map<String, String> postParams) {
 		List<NameValuePair> result = new ArrayList<>(postParams.size());
-		for (String key : postParams.keySet()) {
-			result.add(new BasicNameValuePair(key, postParams.get(key)));
+		for (Map.Entry<String, String> entry : postParams.entrySet()) {
+			result.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
 		}
 		return result;
 	}
@@ -165,12 +165,12 @@ public class HttpClientStack implements HttpStack {
 			final Map<String, MultiPartParam> multipartParams = ((MultiPartRequest<?>) request).getMultipartParams();
 			final Map<String, String> filesToUpload = ((MultiPartRequest<?>) request).getFilesToUpload();
 
-			for (String key : multipartParams.keySet()) {
-				multipartEntity.addPart(new StringPart(key, multipartParams.get(key).value));
+			for (Map.Entry<String, MultiPartParam> entry : multipartParams.entrySet()) {
+				multipartEntity.addPart(new StringPart(entry.getKey(), entry.getValue().value));
 			}
 
-			for (String key : filesToUpload.keySet()) {
-				File file = new File(filesToUpload.get(key));
+			for (Map.Entry<String, String> entry : filesToUpload.entrySet()) {
+				File file = new File(entry.getValue());
 
 				if (!file.exists()) {
 					throw new IOException(String.format("File not found: %s", file.getAbsolutePath()));
@@ -180,7 +180,7 @@ public class HttpClientStack implements HttpStack {
 					throw new IOException(String.format("File is a directory: %s", file.getAbsolutePath()));
 				}
 
-				FilePart filePart = new FilePart(key, file, null, null);
+				FilePart filePart = new FilePart(entry.getKey(), file, null, null);
 				multipartEntity.addPart(filePart);
 			}
 			httpRequest.setEntity(multipartEntity);
