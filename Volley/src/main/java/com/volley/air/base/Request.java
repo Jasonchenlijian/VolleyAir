@@ -636,7 +636,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
      * @param response Response from the network
      * @return The parsed response, or null in the case of an error
      */
-    abstract protected Response<T> parseNetworkResponse(NetworkResponse response);
+    protected abstract Response<T> parseNetworkResponse(NetworkResponse response);
 
     /**
      * Subclasses can override this method to parse 'networkError' and return a more specific error.
@@ -657,7 +657,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
      * @param response The parsed response returned by
      * {@link #parseNetworkResponse(NetworkResponse)}
      */
-    abstract protected void deliverResponse(T response);
+    protected abstract void deliverResponse(T response);
 
     /**
      * Delivers error message to the ErrorListener that the Request was

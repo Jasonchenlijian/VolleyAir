@@ -14,7 +14,7 @@ import com.volley.air.misc.MultipartUtils;
 /* package */ class Boundary {
 
     /* The pool of ASCII chars to be used for generating a multipart boundary. */
-    private final static char[] MULTIPART_CHARS =
+    private static final char[] MULTIPART_CHARS =
             "-_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();   //$NON-NLS-1$
 
     private final String boundary;

@@ -23,10 +23,10 @@ public class ImageUtils {
 
     /** Minimum class memory class to use full-res photos */
     @SuppressWarnings("unused")
-	private final static long MIN_NORMAL_CLASS = 32;
+    private static final long MIN_NORMAL_CLASS = 32;
     /** Minimum class memory class to use small photos */
     @SuppressWarnings("unused")
-	private final static long MIN_SMALL_CLASS = 24;
+    private static final long MIN_SMALL_CLASS = 24;
 
     private static final String BASE64_URI_PREFIX = "base64,";
     private static final Pattern BASE64_IMAGE_URI_PATTERN = Pattern.compile("^(?:.*;)?base64,.*");
